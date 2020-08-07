@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: ribbon
+
+server:
+  port: 3001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+#添加ribbon重试机制
+ribbon:
+  MaxAutoRetriesNextServer: 2     #更换实例的次数
+  MaxAutoRetries: 1               #当前实例重试次数，尝试失败会更换下一个实例
+  OkToRetryOnAllOperations: true  #对连接超时、读取超时都进行重试
+
+#设置hystrix超时时间 小于 ribbon 重试时间(1s)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500
+
+#设置Actuator  暴露监控端点(hystrix)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream #(只监控hystrix) 监控所有("*")

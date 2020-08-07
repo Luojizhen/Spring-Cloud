@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: item-service
+
+server:
+  port: 8001
+
+eureka:
+  client:
+    service-url:
+      #默认地点-不是云服务只能写defaultZone
+      defaultZone: http://eureka1:2001/eureka
+
+#设置board监控 暴露端点!
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

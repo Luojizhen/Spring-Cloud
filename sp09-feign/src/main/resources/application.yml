@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: feign
+
+server:
+  port: 3002
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
+
+#设置ribbon 超时 和 重试
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 1000
+
+item-service:
+  ribbon:
+    ConnectTimeout: 500
+    ReadTimeout: 1000
+    MaxAutoRetriesNextServer: 2
+    MaxAutoRetries: 1
+
+#feign默认关闭hystrix
+feign:
+  hystrix:
+    enabled: true
+
+#暂时减小降级超时时间(测试)
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 500
+#设置Actuator  暴露监控端点(hystrix)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
