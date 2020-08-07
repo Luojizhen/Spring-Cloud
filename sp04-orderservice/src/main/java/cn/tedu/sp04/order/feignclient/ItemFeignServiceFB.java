@@ -35,4 +35,5 @@ public class ItemFeignServiceFB implements ItemFeignService {
     public JsonResult decreaseNumber(List<Item> items) {
         return JsonResult.err("无法修改商品库存!");
     }
+
 }
