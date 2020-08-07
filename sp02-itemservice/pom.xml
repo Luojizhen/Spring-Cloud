@@ -29,6 +29,9 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+
+
         <dependency>
             <groupId>cn.tedu</groupId>
             <artifactId>sp01-commons</artifactId>
@@ -43,6 +46,7 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+
             <!-- 添加转JSO格式依赖 -->
             <exclusions>
                 <exclusion>
@@ -50,6 +54,12 @@
                     <groupId>com.fasterxml.jackson.dataformat</groupId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- 添加config依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
     </dependencies>

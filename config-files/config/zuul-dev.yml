@@ -11,6 +11,7 @@ server:
 eureka:
   client:
     service-url:
+      #默认地点-不是云服务只能写defaultZone
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
 #默认规则
 #根据 eureka 注册中心的注册信息, 进行自动配置
