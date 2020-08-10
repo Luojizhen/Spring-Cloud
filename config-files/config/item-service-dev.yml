@@ -9,9 +9,9 @@ spring:
     port: 5672
     username: MiChaelJordan
     password: 666666
-    zipkin:
-      sender:
-        type: rabbit
+  zipkin:
+    sender:
+      type: rabbit
 
 
 server:
