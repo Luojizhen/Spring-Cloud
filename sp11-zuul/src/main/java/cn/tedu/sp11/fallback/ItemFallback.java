@@ -31,7 +31,7 @@ public class ItemFallback implements FallbackProvider {
     public String getRoute() {
         //当执行item-service失败，
         //应用当前这个降级类
-        return "*";
+        return "item-service";
     }
 
     /**
@@ -69,7 +69,6 @@ public class ItemFallback implements FallbackProvider {
 
             @Override
             public InputStream getBody() throws IOException {
-                log.info("fallback body");
                 String s = JsonResult.err().msg("获取商品列表失败!").toString();
                 return new ByteArrayInputStream(s.getBytes("UTF-8"));
             }

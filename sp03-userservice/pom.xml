@@ -42,6 +42,12 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
+        <!-- 添加sleuth依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+
         <!-- 添加config依赖 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

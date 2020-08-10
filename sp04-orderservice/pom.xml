@@ -58,6 +58,12 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
+        <!-- 添加sleuth依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+
         <!-- 添加actuator依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

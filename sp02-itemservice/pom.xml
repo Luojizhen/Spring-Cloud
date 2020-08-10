@@ -30,6 +30,11 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 添加sleuth依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
 
 
         <dependency>
@@ -61,6 +66,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
+
 
     </dependencies>
 

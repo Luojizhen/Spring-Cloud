@@ -15,7 +15,8 @@ public class Test1 {
         //创建连接工厂,并设置连接信息
         ConnectionFactory f = new ConnectionFactory();
         f.setHost("192.168.126.128");
-        f.setPort(5672); //5672是默认通信端口
+        //5672是默认通信端口
+        f.setPort(5672);
         f.setUsername("MiChaelJordan");
         f.setPassword("666666");
 
@@ -35,7 +36,7 @@ public class Test1 {
         /**
          * 发布消息
          * 参数含义: 1.空串, 2.队列名, 3.
-         *
+         *第一个参数 是 默认的交换机 direct, 默认是"".
          */
         channel.basicPublish("","Helloworld",null,"Hello啊 老马~".getBytes());
 

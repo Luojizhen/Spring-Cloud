@@ -17,7 +17,8 @@ public class Test2 {
         //创建连接工厂,并设置连接信息
         ConnectionFactory f = new ConnectionFactory();
         f.setHost("192.168.126.128");
-        f.setPort(5672); //5672是默认通信端口(默认端口可以省略)
+        //5672是默认通信端口(默认端口可以省略)
+        f.setPort(5672);
         f.setUsername("MiChaelJordan");
         f.setPassword("666666");
 
