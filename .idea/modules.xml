@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/config-files/config-files.iml" filepath="$PROJECT_DIR$/config-files/config-files.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lucene-demo/lucene-demo.iml" filepath="$PROJECT_DIR$/lucene-demo/lucene-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../达内java笔记/第五阶段/亿发课前资料-2003/亿发课前资料/solr/06-拼多项目/pd-web/pd-web.iml" filepath="$PROJECT_DIR$/../../../达内java笔记/第五阶段/亿发课前资料-2003/亿发课前资料/solr/06-拼多项目/pd-web/pd-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../../达内java笔记/第五阶段/亿发课前资料-2003/亿发课前资料/solr/06-拼多项目/pd-order-consumer/pd-web (1).iml" filepath="$PROJECT_DIR$/../../../达内java笔记/第五阶段/亿发课前资料-2003/亿发课前资料/solr/06-拼多项目/pd-order-consumer/pd-web (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/rabbitmq/rabbitmq.iml" filepath="$PROJECT_DIR$/rabbitmq/rabbitmq.iml" />
