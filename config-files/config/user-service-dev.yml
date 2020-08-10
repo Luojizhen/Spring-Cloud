@@ -16,7 +16,7 @@ spring:
     password: 666666
   zipkin:
     sender:
-      type: rabbit
+    type: rabbit
 
 server:
   port: 8101
