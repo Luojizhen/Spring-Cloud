@@ -1,9 +1,7 @@
 spring:
   application:
     name: item-service
-  cloud:
-    config:
-      override-none: true
+
   rabbitmq:
     host: 192.168.126.128
     port: 5672
@@ -11,25 +9,20 @@ spring:
     password: 666666
   zipkin:
     sender:
-    type: rabbit
+      type: rabbit
+  cloud:
+    config:
+      override-none: true
 
-
+# 8001, 8101, 8201
 server:
   port: 8001
 
 eureka:
   client:
     service-url:
-      #默认地点-不是云服务只能写defaultZone
-      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
-
+      # 默认地点，
+      defaultZone: http://eureka1:2001/eureka,http:/eureka2:2002/eureka
   instance:
-    prefer-ip-address: true #使用ip进行注册
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port} # 界面列表中显示的格式也显示ip
-
-#设置board监控 暴露端点!
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
