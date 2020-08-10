@@ -9,6 +9,15 @@ spring:
     config:
       override-none: true
 
+  rabbitmq:
+    host: 192.168.126.128
+    port: 5672
+    username: MiChaelJordan
+    password: 666666
+    zipkin:
+      sender:
+        type: rabbit
+
 server:
   port: 8101
 
