@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    host: 192.168.126.128
+    username: MiChaelJordan
+    password: 666666
+    #设置Qos抓取1条消息.
+    listener:
+      simple:
+        prefetch: 1
+
